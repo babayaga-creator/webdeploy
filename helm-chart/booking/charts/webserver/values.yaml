@@ -7,7 +7,7 @@ env_var:
   dbhost: DBHOST
   dbhost_value: postgres.webapp.svc
   apphost: APPHOST
-  apphost_value: 172.104.255.69
+  apphost_value: minfinaweb.app.siktir.com
   apphostport: APPHOSTPORT
 
 
