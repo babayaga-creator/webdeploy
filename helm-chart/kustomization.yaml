@@ -4,5 +4,6 @@ kind: Kustomization
 metadata:
   name: webapp
 
-resources:
+resources: 
+  - booking.yaml
 
