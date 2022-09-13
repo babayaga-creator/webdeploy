@@ -1,0 +1,24 @@
+image:
+  repository: devopsarif00/webpage
+  tag: "1"
+ports:
+  container_port: "8080"
+env_var:
+  dbhost: DBHOST
+  dbhost_value: postgres.webapp.svc
+  apphost: APPHOST
+  apphost_value: 172.104.255.69
+  apphostport: APPHOSTPORT
+
+
+host_url: "minfinaweb.app.siktir.com"
+service:
+  port: "80"
+  target_port: "8080"
+  type: "LoadBalancer"
+  session_affinity: "ClientIP"
+ingress:  
+  path: "/"
+  path_type: "Prefix"
+  class: "nginx"
+

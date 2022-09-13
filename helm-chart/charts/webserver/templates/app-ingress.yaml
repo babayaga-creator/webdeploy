@@ -1,0 +1,28 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ include "webapp.fullname" . }}-ingress
+  annotations:
+   
+    nginx.ingress.kubernetes.io/affinity: cookie
+    nginx.ingress.kubernetes.io/affinity-mode: persistent
+    nginx.ingress.kubernetes.io/session-cookie-hash: sha1
+    nginx.ingress.kubernetes.io/session-cookie-name: sample-cookie
+    nginx.ingress.kubernetes.io/affinity-canary-behavior: sticky
+    nginx.ingress.kubernetes.io/session-cookie-expires: "172800"
+    nginx.ingress.kubernetes.io/session-cookie-max-age: "172800"
+spec:
+  ingressClassName: {{ .Values.ingress.class}}
+  rules:
+  - host: {{ .Values.host_url}}
+    http:
+      paths:
+      - backend:
+          service:
+            name: {{ include "webapp.fullname" . }}
+            port:
+              number: 80
+        path: {{ .Values.ingress.path}}
+        pathType: {{ .Values.ingress.path_type}}
+status:
+  loadBalancer: {}
