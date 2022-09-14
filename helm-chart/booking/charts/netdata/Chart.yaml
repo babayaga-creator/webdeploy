@@ -1,0 +1,18 @@
+apiVersion: v2
+name: netdata
+version: 3.7.30
+description: Real-time performance monitoring, done right!
+type: application
+keywords:
+  - alerting
+  - metric
+  - monitoring
+home: https://netdata.cloud/
+sources:
+  - https://github.com/netdata/helmchart
+  - https://github.com/netdata/netdata
+maintainers:
+  - name: Netdata Cloud SRE team
+    email: cloud-sre@netdata.cloud
+icon: https://netdata.github.io/helmchart/logo.png
+appVersion: v1.36.1
