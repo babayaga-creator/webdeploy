@@ -20,7 +20,7 @@ spec:
         ports:
         - containerPort: 5432
         volumeMounts:
-        - name: postgres-pv-storage
+        - name: postgres-pv-storagestage
           mountPath: /var/lib/postgresql/data
           subPath: postgres
         env:
@@ -45,6 +45,6 @@ spec:
 
 
       volumes:
-      - name: postgres-pv-storage
+      - name: postgres-pv-storagestage
         persistentVolumeClaim:
           claimName: postgres-pv-claim
