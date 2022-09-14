@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: webapp-stage
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: git@github.com:babayaga-creator/webdeploy
+    targetRevision: HEAD
+    path: helm-chart/stage
+  destination: 
+    server: https://kubernetes.default.svc
+    namespace: webapp-stage
+
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true 
+    automated:
+      selfHeal: true
+      prune: true
+        

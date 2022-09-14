@@ -1,0 +1,2 @@
+Grattis! Du har installerat {{ .Chart.Name}}
+Versionen är {{ .Release.Name}}

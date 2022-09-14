@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "webapp.fullname" . }}
+  labels:
+    app: {{ include "webapp.fullname" . }}
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: {{ include "webapp.fullname" . }}
+
+  template:
+    metadata:
+      labels:
+        app: {{ include "webapp.fullname" . }}
+
+    spec:
+      terminationGracePeriodSeconds: 1
+      containers:
+      - name: {{ .Chart.Name }}
+        image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: Always
+        env:
+        - name: {{ .Values.env_var.dbhost }}
+          value: {{ .Values.env_var.dbhost_value }}
+        - name: {{ .Values.env_var.apphost }}
+          value: {{ .Values.env_var.apphost_value }}
+        - name: {{ .Values.env_var.apphostport }}
+          value: {{ .Values.env_var.apphostport_value }}
+        ports:
+        - containerPort: {{ .Values.ports.container_port }}

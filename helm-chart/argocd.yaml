@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: git@github.com:babayaga-creator/webdeploy
     targetRevision: HEAD
-    path: helm-chart/booking   
+    path: helm-chart/booking
   destination: 
     server: https://kubernetes.default.svc
     namespace: webapp
