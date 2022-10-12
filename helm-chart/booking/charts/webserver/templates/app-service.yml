@@ -7,6 +7,7 @@ spec:
   ports: 
   - port: {{ .Values.service.port}}
     targetPort: {{ .Values.service.target_port}}
+    nodePort: 30008
  
     protocol: TCP
   sessionAffinity: {{ .Values.service.session_affinity}}
