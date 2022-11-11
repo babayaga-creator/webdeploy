@@ -15,7 +15,7 @@ host_url: "minfinaweb.app.siktir.stage.com"
 service:
   port: "80"
   target_port: "8080"
-  type: "LoadBalancer"
+  type: "ClusterIP"
   session_affinity: "ClientIP"
 ingress:  
   path: "/"
