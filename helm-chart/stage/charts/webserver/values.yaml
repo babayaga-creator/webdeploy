@@ -19,6 +19,6 @@ service:
   session_affinity: "ClientIP"
 ingress:  
   path: "/stage"
-  path_type: "Prefix"
+  path_type: "exact"
   class: "nginx"
 
