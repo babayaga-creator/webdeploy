@@ -11,14 +11,14 @@ env_var:
   apphostport: APPHOSTPORT
 
 
-host_url: "minfinaweb.app.siktir.stage.com"
+host_url: "minfinaweb.app.siktir.com"
 service:
   port: "80"
   target_port: "8080"
   type: "NodePort"
   session_affinity: "ClientIP"
 ingress:  
-  path: "/"
+  path: "/stage"
   path_type: "Exact"
   class: "nginx"
 
