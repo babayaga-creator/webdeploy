@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: {{ include "webapp.fullname" . }}
 spec:
-  type: {{ .Values.service.type}}
+  
   ports: 
   - port: {{ .Values.service.port}}
     targetPort: {{ .Values.service.target_port}}
