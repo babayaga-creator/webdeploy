@@ -19,6 +19,6 @@ service:
   session_affinity: "ClientIP"
 ingress:  
   path: "/prod"
-  path_type: "exact"
+  path_type: "Prefix"
   class: "nginx"
 
