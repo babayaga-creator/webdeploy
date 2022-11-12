@@ -5,7 +5,7 @@ metadata:
   name: api-instances
 
 resources:
- # - argocd-stage.yml
+  - argocd-stage.yml
   - argocd.yaml
 
 
