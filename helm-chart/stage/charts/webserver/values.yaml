@@ -11,7 +11,7 @@ env_var:
   apphostport: APPHOSTPORT
 
 
-host_url: "minfinaweb.app.siktir.com"
+host_url: "bizimstageserver.gz"
 service:
   port: "80"
   target_port: "8080"
