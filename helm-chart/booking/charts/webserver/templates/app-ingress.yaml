@@ -14,8 +14,8 @@ metadata:
 spec:
   ingressClassName: {{ .Values.ingress.class}}
   rules:
-
-  - http:
+  - host: {{ .Values.host_url}}
+    http:
       paths:
       - backend:
           service:
