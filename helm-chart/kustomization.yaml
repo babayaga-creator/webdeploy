@@ -6,6 +6,6 @@ metadata:
 
 resources:
   #- argocd-stage.yml
-  - argocd.yaml
+  - ./argocd.yaml
 
 
