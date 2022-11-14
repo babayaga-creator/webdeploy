@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     path: helm-chart/stage
   destination: 
-    server: rancher-desktop
+    server: https://kubernetes.rancher-desktop.svc
     namespace: webapp-stage
 
   syncPolicy:
