@@ -14,15 +14,22 @@ metadata:
 spec:
   ingressClassName: {{ .Values.ingress.class}}
   rules:
-  - host: "minfinaweb.app.siktir.com"
+  - host: minfinaapp.siktir.com
     http:
       paths:
-      - backend:
+      - path: /foo
+        pathType: Prefix
+        backend:
           service:
-            name: {{ include "webapp.fullname" . }}
+            name: sv1
             port:
-              number: 80
-        path: "/"
-        pathType: {{ .Values.ingress.path_type}}
+              number: 8080
+      - path: /bar
+        pathType: Prefix
+        backend:
+          service:
+            name: sv2
+            port:
+              number: 8080
 status:
   loadBalancer: {}
