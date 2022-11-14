@@ -22,7 +22,7 @@ spec:
             name: {{ include "webapp.fullname" . }}
             port:
               number: 80
-        path: "/stage"
+        path: "/"
         pathType: {{ .Values.ingress.path_type}}
 status:
   loadBalancer: {}
