@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     path: helm-chart/stage
   destination: 
-    server: https://rancher-desktop.rancher-desktop.svc
+    name: in-cluster
     namespace: webapp-stage
 
   syncPolicy:
