@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     path: helm-chart/booking
   destination: 
-    server: https://bizimkiler-dns-3fe3a07b.hcp.westeurope.azmk8s.io:443
+    server: bizimkiler-dns-3fe3a07b.hcp.westeurope.azmk8s.io
     namespace: webapp
 
   syncPolicy:
