@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
     path: helm-chart/booking
   destination: 
-    server: https://kubernetes.bizimkiler.svc
+    server: https://bizimkiler.default.svc
     namespace: webapp
 
   syncPolicy:
